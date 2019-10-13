@@ -1,0 +1,12 @@
+<div class="col-md-8 blog-main">
+    <h3 class="pb-3 mb-4 font-italic border-bottom">{{ .Title }}</h3>
+    {{ range .Params.tags }}
+    <span class="badge badge-warning"><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}" role="button">{{ . }}</a></span>
+    {{ end }}
+    <p class="blog-post-meta">Posted by <a href="{{ .Params.from }}" role="button">{{ with .Params.author }}{{ . }}</a>{{ else }}{{ .Site.Title }}{{ end }} {{ .Date.Format "Monday, January 2, 2006" }}</p>
+    <article class="markdown-body">
+        {{- .Content -}}
+    </article>
+</div><!-- /.blog-main -->
+
+

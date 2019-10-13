@@ -1,0 +1,26 @@
+<div class="col-md-8 blog-main">
+    <h3 class="pb-3 mb-4 font-italic border-bottom"></h3>
+
+    {{ range $index, $element := $.Paginator.Pages }}
+    <div class="post-preview">
+        <div class="blog-post">
+            <h2 class="blog-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p class="blog-post-meta">Posted by {{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }} {{ .Date.Format "Monday, January 2, 2006" }}</p>
+        </div>
+    </div>
+    <hr>
+    {{ end }}
+
+
+    {{ $pag := $.Paginator }}
+    {{ if gt $pag.TotalPages 1 }}
+    <nav class="blog-pagination">
+        {{ if $pag.HasPrev }}
+            <a class="btn btn-outline-primary" href="{{ $pag.Prev.URL }}">Older</a>
+        {{ end }}
+        {{ if $pag.HasNext }}
+            <a class="btn btn-outline-secondary" href="{{ $pag.Next.URL }}">Newer</a>
+        {{ end }}
+    </nav>
+    {{ end }}
+</div><!-- /.blog-main -->

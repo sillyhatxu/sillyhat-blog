@@ -1,0 +1,49 @@
+---
+title: "Hugo Learning Notes"
+subtitle: "2018-05-hugo-learning-notes"
+date: 2018-05-26T09:50:53+08:00
+author: "Cookie Xu"
+tags: ["hugo","golang","blog"]
+categories: ["tools"]
+from: "http://sillyhatxu.com"
+draft: false
+---
+
+#### Install
+----
+> Install hugo
+
+`brew install hugo`
+
+`hugo version`
+
+> Create a New Site
+
+`hugo new site sillyhat-hugo`
+
+> Add a Theme
+
+`cd sillyhat-hugo`
+
+`cd themes`
+
+`git clone https://github.com/giraffeacademy/ga-hugo-theme.git`
+
+`echo 'theme = "ga-hugo-theme"' >> config.toml`
+
+> Add Some Content
+
+`hugo new A.md`
+
+![](https://lh3.googleusercontent.com/Xfm0UYP3kQv5yxdSQRcHbGZkRbOPI99bCemyKeMmDZRtQUUTzH6bRQW5UUfU1OVJ3bSmIR4vndNbX3MLUP1gprVW44Lu_1kpJnpOnrTnSkRCnw6uN6wnqLSy04xE9iN000sLAy2V19S2v_swjH1w5dqiiMQ8ZlUCfbGMogziGIEuaXyn4xwM3vYJzReXx1FmSaV-HaGocd-DXKoVwN0DQVEv63_nP__Sc2EhnVYg8FLFhUrnlxULU2gl9bWGubKK4szvPloXzzJoN64_aE12Vul32P0hW1csY8kIx3eWSoIFLu9Q2DQ5jguwRjI0SoRWVAAuNYM0k9XM86Rkg3Bv95vMT4olM6Roqar0xDX77cAX4DElz2wYBJxZ7y2Bnv81q_YU_YN8MrVxuDZYlXEyjFbqygRFcsEGlo_VeJrm73BNYjik_RBov4PN6c1pn8nF6HNDp9OmMiLy75i70eqAC0TpkalYPmnRzp3Ew1R307wlW-u_o9k63zEryUZpiem6EsUPyIVVyS2BPCw8eb6oXPUZSqSl79SkCyd-dvmMQXNbmth6gL1Wa-Gh4MPOqdka4heKCZEEFdxlDSJk1PryFYrgC12CKiXqcAIkTY8THFwMyJWlbZjJzomTZyAZRno1PRxadT61h9WcD6wLp4Rp9Rl4srzjnLxiLdCSUWWU1GuCteZWMKAtsG7aokr9U12nzTZ_5KSQtmzpOhMsODhc3xBu=w1440-h251-no)
+
+> Start the Hugo server
+
+`hugo server -D`
+
+**Navigate to your new site at http://localhost:1313/**
+![](https://lh3.googleusercontent.com/7iRX3BYIUdvp_U1ssvi0IpTchNFUBBWZGjjzlaGG5COKureJXk6BnIlQ6BmbnylRSgvUciIRtg_FtLMibL8-IWygUgQFZ567HEWvvtFc49MfwZYJqhGpBh-hSMxkh1lrWEu0wMpExdC7nTdcn2lQUfOC8h08QyCUFpz6Qe3CBN2iDCegMj5k3yFIiBqSrW52BcpXZZF_Jq7DYti2wXfixtdjpc6Mk4Cn1JH_pmic2-PZVdYfhLQ6oynANLfqb5SOMXGsSXbhXPJ1GNcYQhOSTBLWC-uhqzL5Q3nSmGl3VMfpf2ur7dVYfFEQeTOu7rMddcowOL82X9Nia9nMzMn8lheJ4N9fNSkHXm4ty_UL0leiUDaUPqEY9io-bJ-2tpRmaOM2YUdFHLASE6aM2pqm1A63xZzxpNd4b5Zr-8xKR6KvF6_XsssGGEPvLWGBjyOdcpHYRfXB7OjSnaeHBNft_P28fRD_9dGCnGIGY-tiz4woe3DxgnRzWA_y3z751BLF89ZInPHGdu0JlSrik81gtQcFzU_CpV8_PKw_9EUXje8QM4NTk_f0vmZLDmuEeeq-MKZb7UObKdB-WvIw-7xG3WV7UQCm-1ApYwVUH8QnMpiysrphYZ520kkC5fQmXwFiNh_6TA2_fDIrKP6xkKTNcI48uAdHe8Fxgt7FBeD9Mz-_GYzok_PpcFjg25nWkVvaoJyH2pyshqIOWo8Nr2IMBRLW=w1882-h877-no)
+
+> Properties
+
+![](https://lh3.googleusercontent.com/SQdK4qwwQOGSRL25Fx3nMI0aXctz8ny1-A14Dwer-0s0XZnJhGJg5-XIV2ZDAMrYwtdDU96XIgEBZiaTg4a_r2TMB0piWiJtWXpq_4FZdhbRXHz3NhJx2bWmQRy3mWfuzmMVqwydtgEva1px5MPbvnxRMxn5CTWX7uXcqjtY8nKPx3Xv7xFXiDkd0d1rqup-oo4SwKbtcoWCHW3jzC7cuVCtnSo-ZAZ2CQbse4GdQH7v5UKUyYEOvcLxNoMFHGAo0PZx0ubVKrVavnriArcFs4xy4h-5wSJX-aXXT1n82bENvPLozzU1QzKvuABM2ry5euJOD-bs03GPHD-b2xM64E5LREzQD_6djGj1tA4hx9nsIheBdMQlelw9bNwbyK8mmILsyK-OblqzZa2EED-uxd5WVnhI1tc3raUrIUWhCm7V45c7Jp_t92DsnHY_MiOMeXjJFO3YAQU2-8fFMR9UqHqHaoOJ3LKjK5p1gk1jaKRaP49qvvLV1UpmPW8wKYtOsVkyvzD9iY8cqbW6Jr300fifaVKxh825mMEXJ9G78T60kdEkRr-EA-WZ78DdmkhbC81oI2-bLy69fKIrqw0rJE25l87-ad-_4WrTTu8g8-s6GVNHYaz4AnpBwo1mYAevgPv-UsWr9OgUJTT1eRr8edKZB-bxJpZj3fYT2LVHdfOExQTflM1GNI9uR8l8Bn5UzPTysML2wZ-PI4RMvmOcIUPG=w531-h172-no)

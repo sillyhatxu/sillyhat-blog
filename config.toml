@@ -1,0 +1,4 @@
+#BaseURL = "http://coderzh.github.io/hugo-pacman-theme/"
+baseURL = "http://sillyhatxu.com"
+languageCode = "en-us"
+title = "Sillyhat Blog"

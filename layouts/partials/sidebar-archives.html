@@ -1,0 +1,9 @@
+<div class="p-3">
+    <h4 class="font-italic">Archives</h4>
+    <ol class="list-unstyled mb-0">
+        {{ range (where .Site.Pages "Kind" "page").GroupByDate "2006" }}
+        <!--<a href="{{ "archives" | absURL }}/{{ .Key }}">{{ .Key }}</a>-->
+            <span class="badge badge-secondary">{{ .Key }}<span class="badge badge-success">({{ len .Pages }})</span></span><br>
+        {{ end }}
+    </ol>
+</div>
